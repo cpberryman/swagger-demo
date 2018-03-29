@@ -9,7 +9,7 @@
     <version>0.0.1-SNAPSHOT</version>
 
     <properties>
-        <spring-boot.version>2.0.0.RELEASE</spring-boot.version>
+        <spring-boot.version>1.4.2.RELEASE</spring-boot.version>
         <lombok.version>1.16.2</lombok.version>
         <json-path-assert.version>2.2.0</json-path-assert.version>
     </properties>
