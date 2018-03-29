@@ -38,11 +38,13 @@ public class ControllerTest {
 
     private Controller controller;
 
-    private static final Customer stubCustomer = Customer.builder()
-            .id(CUSTOMER_ID)
-            .name(CUSTOMER_NAME)
-            .surname(CUSTOMER_SURNAME)
-            .build();
+    private static final Customer stubCustomer = new Customer();
+
+    static {
+        stubCustomer.setId(CUSTOMER_ID);
+        stubCustomer.setName(CUSTOMER_NAME);
+        stubCustomer.setSurname(CUSTOMER_SURNAME);
+    }
 
     @Before
     public void init() {

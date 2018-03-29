@@ -9,8 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/customers")
-public class Controller {
+public class Controller implements CustomersApi {
 
     private final CustomerService service;
 
@@ -24,7 +23,6 @@ public class Controller {
         return new ResponseEntity<Customer>(service.addCustomer(customer), httpHeaders(), HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/find/{id}", method = RequestMethod.GET, produces = "application/json")
     public ResponseEntity<Customer> find(@PathVariable Integer id) {
         return new ResponseEntity<Customer>(service.findCustomerById(id), httpHeaders(), HttpStatus.OK);
     }

@@ -12,10 +12,11 @@ public class CustomerService {
 
     public Customer findCustomerById(Integer id) {
         //dummy return value
-        return Customer.builder()
-                .id(1)
-                .name("Banana")
-                .surname("Bananaman")
-                .build();
+        Customer customer = new Customer();
+        customer.setId(1);
+        customer.setName("Banana");
+        customer.setSurname("Bananaman");
+
+        return customer;
     }
 }
